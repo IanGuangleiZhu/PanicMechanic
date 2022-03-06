@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19A603" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AnxietyRating" representedClassName="AnxietyRating" syncable="YES">
+        <attribute name="score" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ts" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="cycle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cycle" inverseName="anxiety" inverseEntity="Cycle"/>
+    </entity>
+    <entity name="Cycle" representedClassName="Cycle" syncable="YES">
+        <attribute name="endTs" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="anxiety" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="AnxietyRating" inverseName="cycle" inverseEntity="AnxietyRating"/>
+        <relationship name="hr" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="HeartRateSample" inverseName="cycle" inverseEntity="HeartRateSample"/>
+        <relationship name="quality" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="QualityQuestion" inverseName="cycle" inverseEntity="QualityQuestion"/>
+        <relationship name="trigger" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TriggerQuestion" inverseName="cycle" inverseEntity="TriggerQuestion"/>
+    </entity>
+    <entity name="EpisodeLocation" representedClassName="EpisodeLocation" syncable="YES">
+        <attribute name="lastUpdated" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+    </entity>
+    <entity name="HeadlessUser" representedClassName="HeadlessUser" syncable="YES">
+        <attribute name="age" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="gender" attributeType="String"/>
+        <attribute name="lastUpdated" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="nickname" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="HeartRateSample" representedClassName="HeartRateSample" syncable="YES">
+        <attribute name="bpm" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ts" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="cycle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cycle" inverseName="hr" inverseEntity="Cycle"/>
+    </entity>
+    <entity name="QualityQuestion" representedClassName="QualityQuestion" syncable="YES">
+        <attribute name="score" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ts" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="type" attributeType="String"/>
+        <relationship name="cycle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cycle" inverseName="quality" inverseEntity="Cycle"/>
+    </entity>
+    <entity name="TriggerQuestion" representedClassName="TriggerQuestion" syncable="YES">
+        <attribute name="trigger" attributeType="String" defaultValueString="UNKNOWN"/>
+        <attribute name="ts" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="cycle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cycle" inverseName="trigger" inverseEntity="Cycle"/>
+    </entity>
+    <elements>
+        <element name="AnxietyRating" positionX="27" positionY="99" width="128" height="88"/>
+        <element name="Cycle" positionX="45" positionY="144" width="128" height="133"/>
+        <element name="EpisodeLocation" positionX="45" positionY="171" width="128" height="103"/>
+        <element name="HeadlessUser" positionX="45" positionY="171" width="128" height="103"/>
+        <element name="HeartRateSample" positionX="45" positionY="108" width="128" height="88"/>
+        <element name="QualityQuestion" positionX="45" positionY="126" width="128" height="103"/>
+        <element name="TriggerQuestion" positionX="36" positionY="117" width="128" height="88"/>
+    </elements>
+</model>

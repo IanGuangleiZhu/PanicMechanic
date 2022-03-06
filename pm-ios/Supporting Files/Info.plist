@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>$(PM_APP_NAME)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PM_BUNDLE_ID)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PM_APP_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Bundle ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>$(PM_BUNDLE_ID)</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Access to the camera is required to measure your body's response to panic.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>In order to track where your attacks happen, you must allow access to location services.</string>
+	<key>PMCollectionEpisode</key>
+	<string>$(PM_EPISODE_COLLECTION)</string>
+	<key>PMCollectionUser</key>
+	<string>$(PM_USER_COLLECTION)</string>
+	<key>PMEnvironment</key>
+	<string>$(PM_ENV)</string>
+	<key>PMLink</key>
+	<string>$(PM_LINK)</string>
+	<key>PMURL</key>
+	<string>http://panicmechanicapp.com/</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>11S0BlackTuesday.otf</string>
+		<string>SF-Compact-Rounded-Bold.otf</string>
+		<string>SF-Compact-Rounded-Heavy.otf</string>
+		<string>SF-Compact-Rounded-Light.otf</string>
+		<string>SF-Compact-Rounded-Medium.otf</string>
+		<string>SF-Compact-Rounded-Regular.otf</string>
+		<string>SF-Compact-Rounded-Semibold.otf</string>
+		<string>SF-Compact-Rounded-Thin.otf</string>
+		<string>SF-Compact-Rounded-Ultralight.otf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIStatusBarHidden</key>
+	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+</dict>
+</plist>
